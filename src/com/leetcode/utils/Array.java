@@ -4,10 +4,16 @@ import org.junit.Test;
 
 public class Array {
 	public static void printArray(int[] array) {
-		for(int num : array) {
-			System.out.print(num + " ");
+		System.out.print("{");
+		int len = array.length;
+		for (int i = 0; i < array.length; i++) {
+			if(i == len - 1) {
+				System.out.print(array[i]);
+			} else {
+				System.out.print(array[i] + ",");
+			}
 		}
-		
+		System.out.print("}");
 	}
 	
 	public static void printTwoDimArray(int[][] array) {
@@ -24,12 +30,6 @@ public class Array {
 			System.out.print("}");
 		}
 		System.out.println("}");
-	}
-	
-	@Test
-	public void test() {
-		int[][] test = {{1,3},{2,6},{8,10},{15,18}};
-		printTwoDimArray(test);
 	}
 	
 }
