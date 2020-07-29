@@ -3,6 +3,13 @@ package com.leetcode.utils;
 import org.junit.Test;
 
 public class Array {
+	public static int[] generateArray(int count) {
+		int[] array = new int[count];
+		for(int i = 0; i < count;i++) {
+			array[i] = (int)(Math.random() * 10);
+		}
+		return array;
+	}
 	public static void printArray(int[] array) {
 		System.out.print("{");
 		int len = array.length;
@@ -13,7 +20,7 @@ public class Array {
 				System.out.print(array[i] + ",");
 			}
 		}
-		System.out.print("}");
+		System.out.println("}");
 	}
 	
 	public static void printTwoDimArray(int[][] array) {
