@@ -3,6 +3,15 @@ package com.leetcode.utils;
 import org.junit.Test;
 
 public class Array {
+	public static int[][] generateTwoDimArray(int m, int n) {
+		int[][] array = new int[m][n];
+		for(int i = 0; i < m;i++) {
+			for(int j = 0;j < n;j++) {
+				array[i][j] = (int)(Math.random() * 10);
+			}
+		}
+		return array;
+	}
 	public static int[] generateArray(int count) {
 		int[] array = new int[count];
 		for(int i = 0; i < count;i++) {
