@@ -48,4 +48,10 @@ public class Array {
 		System.out.println("}");
 	}
 	
+	public static void swap(int[] Array, int index1, int index2) {
+		int tmp = Array[index1];
+		Array[index1] = Array[index2];
+		Array[index2] = tmp;
+	}
+	
 }
