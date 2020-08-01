@@ -33,7 +33,7 @@ public class Solution {
 	@Test
 	public void dupTest() {
 		int wrong = 0;
-		for(int i = 0;i < 100;i++) {
+		for(int i = 0;i < 10000;i++) {
 			try{
 				int k = (int)(Math.random() * 10);
 				test(k);
