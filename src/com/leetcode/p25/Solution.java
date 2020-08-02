@@ -31,7 +31,7 @@ public class Solution {
 	@Test
 	public void dupTest() {
 		int wrong = 0;
-		for(int i = 0; i < 100000;i++) {
+		for(int i = 0; i < 10000;i++) {
 			int listLen = (int) (Math.random() * 20);
 			int gap = (int)(Math.random() * 10);
 			try{
