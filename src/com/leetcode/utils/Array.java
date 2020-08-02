@@ -2,7 +2,19 @@ package com.leetcode.utils;
 
 import org.junit.Test;
 
+/**
+ * 辅助测试工具类, 包含数组的常用操作
+ * @author 张恒
+ *
+ */
 public class Array {
+	
+	/**
+	 * 生成二维数组
+	 * @param m
+	 * @param n
+	 * @return
+	 */
 	public static int[][] generateTwoDimArray(int m, int n) {
 		int[][] array = new int[m][n];
 		for(int i = 0; i < m;i++) {
@@ -12,6 +24,11 @@ public class Array {
 		}
 		return array;
 	}
+	/**
+	 * 生成一维数组
+	 * @param count
+	 * @return
+	 */
 	public static int[] generateArray(int count) {
 		int[] array = new int[count];
 		for(int i = 0; i < count;i++) {
@@ -19,8 +36,12 @@ public class Array {
 		}
 		return array;
 	}
+	/**
+	 * 打印一维数组
+	 * @param array
+	 */
 	public static void printArray(int[] array) {
-		System.out.print("{");
+		System.out.print("[");
 		int len = array.length;
 		for (int i = 0; i < array.length; i++) {
 			if(i == len - 1) {
@@ -29,13 +50,15 @@ public class Array {
 				System.out.print(array[i] + ",");
 			}
 		}
-		System.out.println("}");
+		System.out.println("]");
 	}
 	
+	/**
+	 * 打印二维数组
+	 * @param array
+	 */
 	public static void printTwoDimArray(int[][] array) {
-		System.out.print("{");
 		for(int i = 0; i < array.length; i++) {
-			System.out.print("{");
 			for(int j = 0; j < array[0].length;j++) {
 				if(j < array[0].length - 1){
 					System.out.print(array[i][j] + ",");
@@ -43,11 +66,16 @@ public class Array {
 					System.out.print(array[i][j]);
 				}
 			}
-			System.out.print("}");
+			System.out.println();
 		}
-		System.out.println("}");
 	}
 	
+	/**
+	 * 交换数组元素
+	 * @param Array
+	 * @param index1
+	 * @param index2
+	 */
 	public static void swap(int[] Array, int index1, int index2) {
 		int tmp = Array[index1];
 		Array[index1] = Array[index2];
