@@ -8,36 +8,36 @@ import java.util.Map;
 import org.hamcrest.core.IsEqual;
 import org.junit.Test;
 
-/**ÔËÓÃÄãËùÕÆÎÕµÄÊý¾Ý½á¹¹£¬Éè¼ÆºÍÊµÏÖÒ»¸ö  LRU (×î½ü×îÉÙÊ¹ÓÃ) »º´æ»úÖÆ¡£ËüÓ¦¸ÃÖ§³ÖÒÔÏÂ²Ù×÷£º »ñÈ¡Êý¾Ý get ºÍ Ð´ÈëÊý¾Ý put ¡£
+/**ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½Ý½á¹¹ï¿½ï¿½ï¿½ï¿½Æºï¿½Êµï¿½ï¿½Ò»ï¿½ï¿½  LRU (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ get ï¿½ï¿½ Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ put ï¿½ï¿½
 
-»ñÈ¡Êý¾Ý get(key) - Èç¹ûÃÜÔ¿ (key) ´æÔÚÓÚ»º´æÖÐ£¬Ôò»ñÈ¡ÃÜÔ¿µÄÖµ£¨×ÜÊÇÕýÊý£©£¬·ñÔò·µ»Ø -1¡£
-Ð´ÈëÊý¾Ý put(key, value) - Èç¹ûÃÜÔ¿²»´æÔÚ£¬ÔòÐ´ÈëÆäÊý¾ÝÖµ¡£µ±»º´æÈÝÁ¿´ïµ½ÉÏÏÞÊ±£¬ËüÓ¦¸ÃÔÚÐ´ÈëÐÂÊý¾ÝÖ®Ç°É¾³ý×î¾ÃÎ´Ê¹ÓÃµÄÊý¾ÝÖµ£¬´Ó¶øÎªÐÂµÄÊý¾ÝÖµÁô³ö¿Õ¼ä¡£
+ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ get(key) - ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ (key) ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ô¿ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò·µ»ï¿½ -1ï¿½ï¿½
+Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ put(key, value) - ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ïµ½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°É¾ï¿½ï¿½ï¿½ï¿½ï¿½Î´Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ó¶ï¿½Îªï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ä¡£
 
-½ø½×:
+ï¿½ï¿½ï¿½ï¿½:
 
-ÄãÊÇ·ñ¿ÉÒÔÔÚ O(1) Ê±¼ä¸´ÔÓ¶ÈÄÚÍê³ÉÕâÁ½ÖÖ²Ù×÷£¿
+ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ O(1) Ê±ï¿½ä¸´ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½
 
-Ê¾Àý:
+Ê¾ï¿½ï¿½:
 
-LRUCache cache = new LRUCache( 2 /* »º´æÈÝÁ¿ */ 
+LRUCache cache = new LRUCache( 2 /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */ 
 
  public //cache.put(1, 1);
 //cache.put(2, 2);
-//cache.get(1);       // ·µ»Ø  1
-//cache.put(3, 3);    // ¸Ã²Ù×÷»áÊ¹µÃÃÜÔ¿ 2 ×÷·Ï
-//cache.get(2);       // ·µ»Ø -1 (Î´ÕÒµ½)
-//cache.put(4, 4);    // ¸Ã²Ù×÷»áÊ¹µÃÃÜÔ¿ 1 ×÷·Ï
-//cache.get(1);       // ·µ»Ø -1 (Î´ÕÒµ½)
-//cache.get(3);       // ·µ»Ø  3
-//cache.get(4);       // ·µ»Ø  4
+//cache.get(1);       // ï¿½ï¿½ï¿½ï¿½  1
+//cache.put(3, 3);    // ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ô¿ 2 ï¿½ï¿½ï¿½ï¿½
+//cache.get(2);       // ï¿½ï¿½ï¿½ï¿½ -1 (Î´ï¿½Òµï¿½)
+//cache.put(4, 4);    // ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ô¿ 1 ï¿½ï¿½ï¿½ï¿½
+//cache.get(1);       // ï¿½ï¿½ï¿½ï¿½ -1 (Î´ï¿½Òµï¿½)
+//cache.get(3);       // ï¿½ï¿½ï¿½ï¿½  3
+//cache.get(4);       // ï¿½ï¿½ï¿½ï¿½  4
 //**/
 class LRUCache {
 	LinkedHashMap<Integer,Integer> map;
     public LRUCache(int capacity) {
-    	//0.75fÊÇ×°ÔØÒò×Ó,true±íÊ¾,mapÀïÃæµÄÔªËØ°´ÕÕÊ±¼äÅÅÐò
+    	//0.75fï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,trueï¿½ï¿½Ê¾,mapï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø°ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     	map = new LinkedHashMap<Integer,Integer>(capacity,0.75f,true){
     		@Override
-    		//ÖØµãÊÇÖØÐ´Õâ¸ö·½·¨
+    		//ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             protected boolean removeEldestEntry(Map.Entry eldest) {
                 return size()>capacity;
             }

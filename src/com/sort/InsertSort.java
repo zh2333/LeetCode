@@ -1,3 +1,5 @@
+package com.sort;
+
 import org.junit.Test;
 
 public class InsertSort {
