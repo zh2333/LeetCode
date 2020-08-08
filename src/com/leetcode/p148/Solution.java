@@ -15,6 +15,14 @@ import com.leetcode.datastructure.ListNode;
  */
 class Solution {
     public ListNode sortList(ListNode head) {
+    	if(head == null) return null;
+    	
+    	ListNode move = head;
+    	ListNode currNode = head;
+    	while(move != null) {
+    		
+    	}
+    	
 		return head;
 
     }
