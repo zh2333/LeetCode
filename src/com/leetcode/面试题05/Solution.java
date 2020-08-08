@@ -1,4 +1,4 @@
-package com.leetcode.ÃæÊÔÌâ05;
+package com.leetcode.é¢è¯•é¢˜05;
 
 class Solution {
 	public static void main(String[] args) {

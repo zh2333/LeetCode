@@ -1,10 +1,5 @@
 package com.leetcode.p392;
 
-<<<<<<< HEAD
-class Solution {
-    public boolean isSubsequence(String s, String t) {
-        if(s.length() > t.length() ) return false;
-=======
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -67,6 +62,5 @@ class Solution {
     		}
     	}
     	return true;
->>>>>>> e827dbab56c9bbeacf7823dc2959966ac10de9d9
     }
 }

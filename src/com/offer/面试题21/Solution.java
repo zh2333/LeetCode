@@ -1,4 +1,4 @@
-package com.offer.ÃæÊÔÌâ21;
+package com.offer.é¢è¯•é¢˜21;
 
 class Solution {
     public int[] exchange(int[] nums) {
@@ -6,8 +6,8 @@ class Solution {
     	int j = nums.length;
     	
     	while(i < j){
-    		while(i < j && nums[i] % 2 == 1) ++i;//´ÓÇ°ÕÒµ½Å¼Êı
-    		while(i < j && nums[j] % 2 == 0) --j;//´ÓºóÕÒµ½ÆæÊı
+    		while(i < j && nums[i] % 2 == 1) ++i;//ï¿½ï¿½Ç°ï¿½Òµï¿½Å¼ï¿½ï¿½
+    		while(i < j && nums[j] % 2 == 0) --j;//ï¿½Óºï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½
     		if(i < j){
     			swap(nums,i,j);
     		}

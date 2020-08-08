@@ -1,4 +1,4 @@
-package com.offer.ÃæÊÔÌâ66;
+package com.offer.é¢è¯•é¢˜66;
 
 class Solution {
     public int[] constructArr(int[] a) {

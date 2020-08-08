@@ -1,4 +1,4 @@
-package com.offer.ÃæÊÔÌâ09;
+package com.offer.é¢è¯•é¢˜09;
 
 import java.util.Stack;
 
@@ -32,7 +32,7 @@ class CQueue {
     	if(!s1.isEmpty()){
     		return s1.pop();
     	}else{
-    		throw new RuntimeException("²»´æÔÚ");
+    		throw new RuntimeException("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     	}
     }
 }

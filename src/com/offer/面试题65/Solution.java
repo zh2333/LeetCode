@@ -1,14 +1,14 @@
-package com.offer.ÃæÊÔÌâ65;
+package com.offer.é¢è¯•é¢˜65;
 
 class Solution {
 	/**
-	 * ¼Ó·¨µÈÓÚ,a^b + (a&b)<<1
+	 * ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½,a^b + (a&b)<<1
 	 * @param a
 	 * @param b
 	 * @return
 	 */
     public int add(int a, int b) {
-    	while(a != 0){//a²»Îª0±íÊ¾ÓĞ½øÎ»
+    	while(a != 0){//aï¿½ï¿½Îª0ï¿½ï¿½Ê¾ï¿½Ğ½ï¿½Î»
     		int noCarryPlus = a ^ b;
     		a = (a&b) << 1;
     		b = noCarryPlus;
