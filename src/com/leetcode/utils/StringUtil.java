@@ -11,6 +11,9 @@ public class StringUtil {
      * @return
      */
     public static String generateStr(int len) {
+        if(len == 0) {
+            System.out.println("长度不能为0!");
+        }
         char[] chars = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k' , 'l', 'm', 'n' , 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
                         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K' , 'L', 'M', 'N' , 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
                         '-', '=', '!', '@','#', '%' , '^', '&', '*', '+', '?', '{', '}', '[', ']', '.', ',', '|', '<', '>'};
@@ -28,6 +31,9 @@ public class StringUtil {
      * @param s
      */
     public static void printStr(String s) {
+        if(s == null) {
+            System.out.println("空串!");
+        }
         int len = s.length();
         for (int i = 0; i < len; i++) {
             System.out.print(s.charAt(i));
@@ -41,6 +47,9 @@ public class StringUtil {
      * @return
      */
     public static String reverseStr(String s) {
+        if(s == null) {
+            System.out.println("空串!");
+        }
         StringBuilder sb = new StringBuilder(s);
         return sb.reverse().toString();
     }
