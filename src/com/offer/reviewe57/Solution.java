@@ -1,4 +1,4 @@
-package com.offer.面试题57;
+package com.offer.reviewe57;
 
 class Solution {
     public int[][] findContinuousSequence(int target) {

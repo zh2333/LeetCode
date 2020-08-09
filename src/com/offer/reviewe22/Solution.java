@@ -1,4 +1,4 @@
-package com.offer.面试题22;
+package com.offer.reviewe22;
 
 import com.leetcode.datastructure.ListNode;
 

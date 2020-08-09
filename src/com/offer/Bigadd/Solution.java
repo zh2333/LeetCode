@@ -1,4 +1,4 @@
-package com.offer.大数相加;
+package com.offer.Bigadd;
 
 import java.util.Scanner;
 

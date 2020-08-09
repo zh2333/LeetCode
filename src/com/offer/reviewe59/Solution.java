@@ -1,4 +1,4 @@
-package com.offer.面试题59;
+package com.offer.reviewe59;
 
 /**
  * ����һ������ nums �ͻ������ڵĴ�С k�����ҳ����л�������������ֵ��

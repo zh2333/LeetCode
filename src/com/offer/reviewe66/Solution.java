@@ -1,4 +1,4 @@
-package com.offer.面试题66;
+package com.offer.reviewe66;
 
 class Solution {
     public int[] constructArr(int[] a) {

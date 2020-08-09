@@ -1,4 +1,4 @@
-package com.offer.面试题21;
+package com.offer.reviewe21;
 
 class Solution {
     public int[] exchange(int[] nums) {

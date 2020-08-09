@@ -1,7 +1,6 @@
-package com.offer.面试题30;
+package com.offer.reviewe30;
 
 import java.util.LinkedList;
-import java.util.Stack;
 
 class MinStack {
 

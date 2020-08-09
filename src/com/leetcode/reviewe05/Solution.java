@@ -1,4 +1,4 @@
-package com.leetcode.面试题05;
+package com.leetcode.reviewe05;
 
 class Solution {
 	public static void main(String[] args) {

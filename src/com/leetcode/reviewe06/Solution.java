@@ -1,4 +1,4 @@
-package com.leetcode.面试题06;
+package com.leetcode.reviewe06;
 
 import java.util.Stack;
 

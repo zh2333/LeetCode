@@ -1,6 +1,4 @@
-package com.offer.面试题04;
-
-import org.junit.experimental.max.MaxCore;
+package com.offer.reviewe04;
 
 /**
  * 
