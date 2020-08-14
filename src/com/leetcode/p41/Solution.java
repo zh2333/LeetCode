@@ -1,26 +1,26 @@
 package com.leetcode.p41;
 
-import com.leetcode.utils.Array;
+import com.leetcode.utils.MyArray;
 
 public class Solution {
 	public int firstMissingPositive(int[] nums) {
 		int len = nums.length;
 		if(len == 0) return 1;
 		
-		//½«iÎ»ÖÃ´¦µÄÔªËØ½»»»µ½nums[i] - 1´¦µÄÎ»ÖÃ£¬ Èç¹ûÁ½¸öÎ»ÖÃ´¦µÄÔªËØÖµÏàµÈÔòÎŞĞè½»»»
+		//ï¿½ï¿½iÎ»ï¿½Ã´ï¿½ï¿½ï¿½Ôªï¿½Ø½ï¿½ï¿½ï¿½ï¿½ï¿½nums[i] - 1ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã£ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã´ï¿½ï¿½ï¿½Ôªï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è½»ï¿½ï¿½
 		for(int i = 0; i < len; i++) {
 			while(nums[i] > 0 && nums[i] < len && nums[i] != nums[nums[i] - 1]) {
-				Array.swap(nums, i, nums[i] - 1);
+				MyArray.swap(nums, i, nums[i] - 1);
 			}
 		}
 		
-		//´ÓÍ·¿ªÊ¼ ±éÀú£¬ Èç¹ûµ±Ç°Î»ÖÃi³öµÄÔªËØºÍnums[i] ²»Âú×ã¹ØÏµ nums[i] - 1 = i, Ôò±íÃ÷µ±Ç°Î»ÖÃi+1Õâ¸öÔªËØÊÇÈ±Ê§µÄ
+		//ï¿½ï¿½Í·ï¿½ï¿½Ê¼ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Î»ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½Ôªï¿½Øºï¿½nums[i] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ nums[i] - 1 = i, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Î»ï¿½ï¿½i+1ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½È±Ê§ï¿½ï¿½
 		for(int i = 0; i < len ; i++) {
 			if(nums[i] != i + 1) {
 				return i + 1;
 			}
 		}
-		//ËµÃ÷ËùÓĞÔªËØ¶¼ÔÚÆäÓ¦¸ÃÔÚµÄÎ»ÖÃ
+		//Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Úµï¿½Î»ï¿½ï¿½
 		return len + 1;
     }
 

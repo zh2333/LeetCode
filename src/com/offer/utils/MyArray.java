@@ -1,16 +1,14 @@
-package com.leetcode.utils;
-
-import org.junit.Test;
+package com.offer.utils;
 
 /**
- * ¸¨Öú²âÊÔ¹¤¾ßÀà, °üº¬Êý×éµÄ³£ÓÃ²Ù×÷
- * @author ÕÅºã
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ã²ï¿½ï¿½ï¿½
+ * @author ï¿½Åºï¿½
  *
  */
-public class Array {
+public class MyArray {
 	
 	/**
-	 * Éú³É¶þÎ¬Êý×é
+	 * ï¿½ï¿½ï¿½É¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
 	 * @param m
 	 * @param n
 	 * @return
@@ -25,7 +23,7 @@ public class Array {
 		return array;
 	}
 	/**
-	 * Éú³ÉÒ»Î¬Êý×é
+	 * ï¿½ï¿½ï¿½ï¿½Ò»Î¬ï¿½ï¿½ï¿½ï¿½
 	 * @param count
 	 * @return
 	 */
@@ -37,7 +35,7 @@ public class Array {
 		return array;
 	}
 	/**
-	 * ´òÓ¡Ò»Î¬Êý×é
+	 * ï¿½ï¿½Ó¡Ò»Î¬ï¿½ï¿½ï¿½ï¿½
 	 * @param array
 	 */
 	public static void printArray(int[] array) {
@@ -54,7 +52,7 @@ public class Array {
 	}
 	
 	/**
-	 * ´òÓ¡¶þÎ¬Êý×é
+	 * ï¿½ï¿½Ó¡ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
 	 * @param array
 	 */
 	public static void printTwoDimArray(int[][] array) {
@@ -71,7 +69,7 @@ public class Array {
 	}
 	
 	/**
-	 * ½»»»Êý×éÔªËØ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 	 * @param Array
 	 * @param index1
 	 * @param index2

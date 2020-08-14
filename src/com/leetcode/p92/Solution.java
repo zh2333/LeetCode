@@ -3,7 +3,7 @@ package com.leetcode.p92;
 import org.junit.Test;
 
 import com.leetcode.datastructure.ListNode;
-import com.leetcode.utils.List;
+import com.leetcode.utils.MyList;
 
 
 /**
@@ -85,7 +85,7 @@ class Solution {
     }
     
     public static void main(String[] args) {
-    	List list = new List();
+    	MyList list = new MyList();
     	Solution so = new Solution();
     	ListNode head = list.generateList(1);
     	head = so.reverseBetween(head, 1, 2);

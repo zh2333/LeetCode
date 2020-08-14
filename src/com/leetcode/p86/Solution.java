@@ -3,31 +3,31 @@ package com.leetcode.p86;
 import org.junit.Test;
 
 import com.leetcode.datastructure.ListNode;
-import com.leetcode.utils.List;
+import com.leetcode.utils.MyList;
 
 /**
- * ¸ø¶¨Ò»¸öÁ´±íºÍÒ»¸öÌØ¶¨Öµ x£¬¶ÔÁ´±í½øÐÐ·Ö¸ô£¬Ê¹µÃËùÓÐÐ¡ÓÚ x µÄ½Úµã¶¼ÔÚ´óÓÚ»òµÈÓÚ x µÄ½ÚµãÖ®Ç°¡£
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ø¶ï¿½Öµ xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð·Ö¸ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ x ï¿½Ä½Úµã¶¼ï¿½Ú´ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ x ï¿½Ä½Úµï¿½Ö®Ç°ï¿½ï¿½
 
-	ÄãÓ¦µ±±£ÁôÁ½¸ö·ÖÇøÖÐÃ¿¸ö½ÚµãµÄ³õÊ¼Ïà¶ÔÎ»ÖÃ¡£
+	ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Úµï¿½Ä³ï¿½Ê¼ï¿½ï¿½ï¿½Î»ï¿½Ã¡ï¿½
 	
-	Ê¾Àý:
+	Ê¾ï¿½ï¿½:
 	
-	ÊäÈë: head = 1->4->3->2->5->2, x = 3
-	Êä³ö: 1->2->2->4->3->5
+	ï¿½ï¿½ï¿½ï¿½: head = 1->4->3->2->5->2, x = 3
+	ï¿½ï¿½ï¿½: 1->2->2->4->3->5
 	
-	À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-	Á´½Ó£ºhttps://leetcode-cn.com/problems/partition-list
-	Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
- * @author ÕÅºã
+	ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+	ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/partition-list
+	ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * @author ï¿½Åºï¿½
  *
  */
 public class Solution {
 	@Test
 	public void test() {
-		ListNode head = List.generateList(10);
-		List.printList(head);
+		ListNode head = MyList.generateList(10);
+		MyList.printList(head);
 		head = partition(head, 6);
-		List.printList(head);	
+		MyList.printList(head);
 	}
 	public ListNode partition(ListNode head, int x) {
 		if(head == null) return null;
@@ -38,7 +38,7 @@ public class Solution {
 		ListNode maxhead = new ListNode(0);
 		ListNode maxMove = maxhead;
 		ListNode move = head;
-		//½«´óÓÚµÈÓÚxµÄ½ÚµãºÍÐ¡ÓÚxµÄ½Úµã·Ö±ð´æ·Åµ½Á½¸öÁ´±íÖÐ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½xï¿½Ä½Úµï¿½ï¿½Ð¡ï¿½ï¿½xï¿½Ä½Úµï¿½Ö±ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		while(move != null) {
 			if(move.val < x) {
 				minMove.next = new ListNode(move.val);

@@ -2,15 +2,15 @@ package com.leetcode.utils;
 
 import com.leetcode.datastructure.ListNode;
 
-public class List {
+public class MyList {
 	/**
-	 * Éú³ÉÖ¸¶¨³¤¶ÈµÄÁ´±í
+	 * ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param count
 	 * @return
 	 */
 	public static ListNode generateList(int count) {
 		if(count == 0) {
-			System.out.println("Á´±í³¤¶È²»ÄÜÎª0");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½È²ï¿½ï¿½ï¿½Îª0");
 			return null;
 		}
 		ListNode head = new ListNode(1);
@@ -24,12 +24,12 @@ public class List {
 	}
 	
 	/**
-	 * ´òÓ¡Á´±í
+	 * ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½
 	 * @param head
 	 */
 	public static void printList(ListNode head) {
 		if(head == null) {
-			System.out.println("Á´±íÍ·²»ÄÜÎª¿Õ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
 		}
 		while(head != null) {
 			if(head.next != null) {
@@ -43,14 +43,14 @@ public class List {
 	}
 	
 	/**
-	 * ·´×ª×ÓÁ´±í
+	 * ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param startNode
 	 * @param endNode
 	 * @return
 	 */
 	public ListNode reverse(ListNode startNode, ListNode endNode) {
 		if(endNode == null || startNode == null) {
-			System.out.println("ÊäÈë½Úµã²»ÄÜÎª¿Õ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Úµã²»ï¿½ï¿½Îªï¿½ï¿½");
 			return null;
 		}
     	ListNode pre = null;

@@ -1,7 +1,7 @@
 package com.leetcode.p147;
 
 import com.leetcode.datastructure.ListNode;
-import com.leetcode.utils.List;
+import com.leetcode.utils.MyList;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -46,11 +46,11 @@ public class Solution {
     }
 
     public void test() {
-        ListNode head = List.generateList(4);
+        ListNode head = MyList.generateList(4);
 
-        List.printList(head);
+        MyList.printList(head);
         head = insertionSortList(head);
-        List.printList(head);
+        MyList.printList(head);
 
     }
     public ListNode insertionSortList(ListNode head) {

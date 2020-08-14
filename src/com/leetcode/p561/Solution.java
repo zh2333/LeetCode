@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import com.leetcode.utils.Array;
+import com.leetcode.utils.MyArray;
 
 /**
  * 给定长度为 2n 的数组, 你的任务是将这些数分成 n 对, 例如 (a1, b1), (a2, b2), ..., (an, bn) ，使得从1 到 n 的 min(ai, bi) 总和最大。
@@ -29,12 +29,12 @@ import com.leetcode.utils.Array;
 public class Solution {
 	@Test
 	public void test(){
-		int[] array = Array.generateArray(10);
-		Array.printArray(array);
+		int[] array = MyArray.generateArray(10);
+		MyArray.printArray(array);
 		int sum = arrayPairSum(array);
 		System.out.println();
 		Arrays.sort(array);
-		Array.printArray(array);
+		MyArray.printArray(array);
 		System.out.println();
 		System.out.println(sum);
 	}
