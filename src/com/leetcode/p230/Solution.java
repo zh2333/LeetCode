@@ -4,6 +4,7 @@ import com.leetcode.datastructure.TreeNode;
 import com.leetcode.utils.MyTree;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
@@ -40,8 +41,7 @@ import java.util.HashSet;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class Solution {
-    private static HashSet<Integer> set = new HashSet<>();
-    private static TreeNode  res = null;
+    private static ArrayList<TreeNode> res = new ArrayList<>();
     @Test
     public void test() {
         TreeNode root  = MyTree.generateBST(9);
@@ -52,26 +52,23 @@ public class Solution {
     }
     public int kthSmallest(TreeNode root, int k) {
         if(root == null) return 0;
-        middle(root, k);
-        if(res != null) {
-            return res.val;
-        }
-        return 0;
+        middle(root);
+
+        return res.get(k -1).val;
     }
 
-    public void middle(TreeNode currroot , int k) {
+    public void middle(TreeNode currroot) {
         if(currroot.left != null) {
-            middle(currroot.left, k);
+            middle(currroot.left);
         }
-        set.add(currroot.val);
-        if (set.size() == k) {
-            if(res == null) {
-                res = currroot;
-            }
-            return;
+       int size = res.size();
+
+        if(size == 0 || currroot.val != res.get(size - 1).val  ) {
+            res.add(currroot);
         }
+
         if(currroot.right != null) {
-            middle(currroot.right, k);
+            middle(currroot.right);
         }
     }
 
