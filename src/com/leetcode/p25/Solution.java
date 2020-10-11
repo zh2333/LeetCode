@@ -3,7 +3,7 @@ package com.leetcode.p25;
 import org.junit.Test;
 
 import com.leetcode.datastructure.ListNode;
-import com.leetcode.utils.List;
+import com.leetcode.utils.MyList;
 
 /**
  * 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
@@ -47,10 +47,10 @@ public class Solution {
 	public void test(int listLen, int gap){
 		System.out.println("链表长度:" + listLen);
 		System.out.println("每隔: " + gap +" 个节点翻转一次");
-		ListNode head = List.generateList(listLen);
-		List.printList(head);
+		ListNode head = MyList.generateList(listLen);
+		MyList.printList(head);
 		head = reverseKGroup(head, gap);
-		List.printList(head);
+		MyList.printList(head);
 	}
 	
     public ListNode reverseKGroup(ListNode head, int k) {

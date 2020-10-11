@@ -2,7 +2,7 @@ package com.leetcode.p73;
 
 import java.util.HashSet;
 import org.junit.Test;
-import com.leetcode.utils.Array;
+import com.leetcode.utils.MyArray;
 
 /**
  * 给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。
@@ -31,10 +31,10 @@ import com.leetcode.utils.Array;
 public class Solution {
 	@Test
 	public void test() {
-		int[][] array = Array.generateTwoDimArray(5, 4);
-		Array.printTwoDimArray(array);
+		int[][] array = MyArray.generateTwoDimArray(5, 4);
+		MyArray.printTwoDimArray(array);
 		setZeroes(array);
-		Array.printTwoDimArray(array);
+		MyArray.printTwoDimArray(array);
 	}
     public void setZeroes(int[][] matrix) {
     	HashSet<Integer> setH = new HashSet<>();

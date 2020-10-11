@@ -1,14 +1,14 @@
 package com.leetcode.p61;
 
 import com.leetcode.datastructure.ListNode;
-import com.leetcode.utils.List;
+import com.leetcode.utils.MyList;
 
 public class Solution {
 	public static void main(String[] args) {
-		ListNode head = List.generateList(10);
-		List.printList(head);
+		ListNode head = MyList.generateList(10);
+		MyList.printList(head);
 		ListNode tmp = rotateRight(head, 3);
-		List.printList(tmp);
+		MyList.printList(tmp);
 		
 	}
 	public static ListNode rotateRight(ListNode head, int k) {

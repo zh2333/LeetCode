@@ -1,6 +1,8 @@
 package com.leetcode.p606;
 
 import com.leetcode.datastructure.TreeNode;
+import com.leetcode.utils.MyTree;
+import org.junit.Test;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -10,6 +12,16 @@ import java.util.Queue;
  * 空节点则用一对空括号 "()" 表示。而且你需要省略所有不影响字符串与原始二叉树之间的一对一映射关系的空括号对。
  * 示例 1:
  *
+=======
+import com.leetcode.utils.MyTree;
+import org.junit.Test;
+
+/**
+ * 606. 根据二叉树创建字符串
+ * 你需要采用前序遍历的方式，将一个二叉树转换成一个由括号和整数组成的字符串。
+ * 空节点则用一对空括号 "()" 表示。而且你需要省略所有不影响字符串与原始二叉树之间的一对一映射关系的空括号对。
+ * 示例 1:
+>>>>>>> 199dfd7f31eff752ef06aa412068693ccc0c5564
  * 输入: 二叉树: [1,2,3,4]
  *        1
  *      /   \
@@ -36,9 +48,28 @@ import java.util.Queue;
  * 链接：https://leetcode-cn.com/problems/construct-string-from-binary-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
 public class Solution {
-    LinkedList<String> res = new LinkedList<>();
+    String res = "";
+
+    @Test
+    public void test() {
+        TreeNode root = MyTree.generateBST(5);
+        MyTree.show(root);
+        res += root.val;
+        tree2str(root);
+        System.out.println(res);
+    }
     public String tree2str(TreeNode t) {
-       return null;
+        if(t == null) {
+            return "";
+        }
+        if(t.left == null && t.right == null) {//左右子树均为空
+            return t.val + "";
+        }
+        if(t.right == null) {
+            return t.val + "(" + tree2str(t.left) + ")";
+        }
+        return t.val+"("+tree2str(t.left)+")("+tree2str(t.right)+")";
     }
 }

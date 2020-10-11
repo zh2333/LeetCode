@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import org.junit.Test;
 import com.leetcode.datastructure.ListNode;
-import com.leetcode.utils.List;
+import com.leetcode.utils.MyList;
 
 /**
  * 给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
@@ -40,10 +40,10 @@ public class Solution {
 	
 	
 	public void test() {
-		ListNode head = List.generateList(6);
-		List.printList(head);
+		ListNode head = MyList.generateList(6);
+		MyList.printList(head);
 		head = deleteDuplicates(head);
-		List.printList(head);
+		MyList.printList(head);
 	}
 	public ListNode deleteDuplicates(ListNode head) {
 		if(head == null) return null;

@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.leetcode.utils.Array;
+import com.leetcode.utils.MyArray;
 
 /**
  * 给定一个无重复元素的有序整数数组，返回数组区间范围的汇总。
@@ -43,7 +43,7 @@ public class Solution {
 	
 	
 	public void test(int len) {
-		int[] nums = Array.generateArray(len);
+		int[] nums = MyArray.generateArray(len);
 		List<String> res = new ArrayList<>();
 		res = summaryRanges(nums);
 		int i = 0;

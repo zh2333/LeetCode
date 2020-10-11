@@ -3,15 +3,15 @@ package com.leetcode.p203;
 import org.junit.Test;
 
 import com.leetcode.datastructure.ListNode;
-import com.leetcode.utils.List;
+import com.leetcode.utils.MyList;
 
 /**
  * 
-	É¾³ýÁ´±íÖÐµÈÓÚ¸ø¶¨Öµ val µÄËùÓÐ½Úµã¡£
-	Ê¾Àý:
-	ÊäÈë: 1->2->6->3->4->5->6, val = 6
-	Êä³ö: 1->2->3->4->5
- * @author ÕÅºã
+	É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ú¸ï¿½ï¿½ï¿½Öµ val ï¿½ï¿½ï¿½ï¿½ï¿½Ð½Úµã¡£
+	Ê¾ï¿½ï¿½:
+	ï¿½ï¿½ï¿½ï¿½: 1->2->6->3->4->5->6, val = 6
+	ï¿½ï¿½ï¿½: 1->2->3->4->5
+ * @author ï¿½Åºï¿½
  *
  */
 public class Solution {
@@ -27,19 +27,19 @@ public class Solution {
 				wrong++;
 			}
 		}
-		System.out.println("³ö´í´ÎÊý: " + wrong);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " + wrong);
 	}
 	
 	public void test(int len, int val) {
-		System.out.println("É¾³ý: " + val);
-		ListNode head = List.generateList(len);
-		List.printList(head);
+		System.out.println("É¾ï¿½ï¿½: " + val);
+		ListNode head = MyList.generateList(len);
+		MyList.printList(head);
 		head = removeElements(head, val);
-		List.printList(head);
+		MyList.printList(head);
 	}
 	public ListNode removeElements(ListNode head, int val) {
 		if(head == null) return head;
-		//¿¼ÂÇÁ´±íÍ·²¿ÖµÎªvalµÄÇé¿ö
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ÖµÎªvalï¿½ï¿½ï¿½ï¿½ï¿½
 			while(head != null && head.val == val ) {
 				head = head.next;
 			}
@@ -47,7 +47,7 @@ public class Solution {
 				return null;
 			}
 		ListNode pre = head;
-		ListNode currNode = pre.next;//Ìø³öÑ­»·Ê±, headµÄÖµ²»µÈÓÚval, Ö±½Ó´ÓÏÂÒ»¸ö½Úµã¿ªÊ¼ÅÐ¶Ï
+		ListNode currNode = pre.next;//ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½Ê±, headï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½val, Ö±ï¿½Ó´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Úµã¿ªÊ¼ï¿½Ð¶ï¿½
 		while(currNode != null && currNode.next != null) {
 			if(currNode.val == val) {
 				pre.next = currNode.next;
@@ -57,7 +57,7 @@ public class Solution {
 				currNode = pre.next;
 			}
 		}
-		//¿¼ÂÇ×îºóÒ»¸ö½ÚµãµÄÇé¿ö
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
 		if(currNode != null && currNode.val == val ) {
 			pre.next = null;
 		}

@@ -2,7 +2,7 @@ package com.leetcode.p189;
 
 import org.junit.Test;
 
-import com.leetcode.utils.Array;
+import com.leetcode.utils.MyArray;
 
 /**
  * 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
@@ -47,10 +47,10 @@ public class Solution {
 	
 	public void test(int k) {
 		System.out.println("右移: " + k + "次");
-		int[] array = Array.generateArray(12);
-		Array.printArray(array);
+		int[] array = MyArray.generateArray(12);
+		MyArray.printArray(array);
 		rotate(array, k);
-		Array.printArray(array);
+		MyArray.printArray(array);
 	}
 	public void rotate(int[] nums, int k) {
         int len = nums.length;

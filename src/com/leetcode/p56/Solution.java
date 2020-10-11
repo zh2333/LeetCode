@@ -2,7 +2,7 @@ package com.leetcode.p56;
 
 import java.util.ArrayList;
 
-import com.leetcode.utils.Array;
+import com.leetcode.utils.MyArray;
 
 /**
  * 给出一个区间的集合，请合并所有重叠的区间。
@@ -107,7 +107,7 @@ public class Solution {
 	public static void main(String[] args) {
 		int[][] example = {{2,2},{2,3},{4,6},{5,6},{1,2},{5,6},{1,3},{3,3}};
 		int[][] res = merge(example);
-		Array.printTwoDimArray(res);
+		MyArray.printTwoDimArray(res);
 		
 		
 	}
