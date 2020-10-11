@@ -1,18 +1,14 @@
 package com.leetcode.test;
 
 import com.leetcode.p146.LRUCache;
+import com.leetcode.utils.StringUtil;
 
 class Test{
 	public static void main(String[] args) {
-		LRUCache cache = new LRUCache(2);
-		cache.put(1, 1);
-		cache.put(2, 2);
-		System.out.println(cache.get(1));
-		cache.put(3, 3);
-		System.out.println(cache.get(2));
-		cache.put(4, 4);
-		System.out.println(cache.get(1));
-		System.out.println(cache.get(3));
-		System.out.println(cache.get(4));
+		StringBuilder sb = new StringBuilder();
+		sb.append(1);
+		sb.append(2);
+		sb.deleteCharAt(sb.length() - 1);
+		StringUtil.printStr(sb.toString());
 	}
 }

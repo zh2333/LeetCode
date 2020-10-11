@@ -19,8 +19,8 @@ class LevelFind {
            for (int i = 0; i < size; i++) {
                TreeNode currNode = levels.poll();
                level.add(currNode.val);
-               if(root.left != null) levels.add(root.left);
-               if(root.right != null) levels.add(root.right);
+               if(currNode!=null && currNode.left != null) levels.add(currNode.left);
+               if(currNode!=null && currNode.right != null) levels.add(currNode.right);
            }
            result.addLast(level);
        }
