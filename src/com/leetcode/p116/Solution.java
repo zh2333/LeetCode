@@ -1,5 +1,13 @@
 package com.leetcode.p116;
 
+import com.leetcode.datastructure.TreeNode;
+import com.leetcode.utils.MyTree;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 class Node {
     public int val;
     public Node left;
@@ -35,7 +43,48 @@ class Node {
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class Solution {
-    public Node connect(Node root) {
 
+    @Test
+    public void test() {
+        TreeNode root = MyTree.generatePerfectTree(3);
+        MyTree.show(root);
+        root = connect(root);
+        MyTree.show(root);
+
+    }
+    public TreeNode connect(TreeNode root) {
+        if (root == null) return root;
+        List<List<TreeNode>> levels = levelFind(root);
+
+        for (List<TreeNode> level: levels) {
+            int size = level.size();
+            for (int i = 0; i < size; i++) {
+                if (i != size - 1) {
+                    level.get(i).next = level.get(i + 1);
+                } else {
+                    level.get(i).next = null;
+                }
+            }
+        }
+        return root;
+    }
+
+    public List<List<TreeNode>>  levelFind(TreeNode root) {
+        List<List<TreeNode>> res = new ArrayList<>();
+        LinkedList<TreeNode> nodes = new LinkedList<>();
+        nodes.add(root);
+        while(!nodes.isEmpty()) {
+            int size = nodes.size();
+            ArrayList<TreeNode> level = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = nodes.poll();
+                level.add(node);
+                if (node != null && node.left != null) nodes.add(node.left);
+                if (node != null && node.right != null) nodes.add(node.right);
+            }
+            res.add(level);
+        }
+
+        return res;
     }
 }
