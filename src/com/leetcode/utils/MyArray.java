@@ -58,7 +58,9 @@ public class MyArray {
 	 * @param array
 	 */
 	public static void printTwoDimArray(int[][] array) {
+		System.out.println("{");
 		for(int i = 0; i < array.length; i++) {
+			System.out.print(" {");
 			for(int j = 0; j < array[0].length;j++) {
 				if(j < array[0].length - 1){
 					System.out.print(array[i][j] + ",");
@@ -66,8 +68,9 @@ public class MyArray {
 					System.out.print(array[i][j]);
 				}
 			}
-			System.out.println();
+			System.out.println("},");
 		}
+		System.out.println("}");
 	}
 	
 	/**
