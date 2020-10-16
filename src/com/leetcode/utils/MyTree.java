@@ -3,14 +3,17 @@ package com.leetcode.utils;
 import com.leetcode.datastructure.TreeNode;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class MyTree {
     private static  TreeNode root = null;
 
-//    @Test
-//    public  void test() {
-//        TreeNode root = generateBST(8);
-//        show(root);
-//    }
+    @Test
+    public  void test() {
+        //TreeNode root = generateBST(8);
+        TreeNode root = generatePerfectTree(3);
+        show(root);
+    }
     /**
      * 生成一棵二叉搜索树
      * @param count 数的节点的数量
@@ -28,6 +31,39 @@ public class MyTree {
         }
         return root;
     }
+
+    /**
+     * 生成一棵完美二叉树
+     * @param levels 树的层数
+     * @return
+     */
+    public static TreeNode generatePerfectTree(int levels) {
+        if (levels == 0) {
+            System.out.println("不能为空树!");
+            return null;
+        }
+        int count = (int)Math.pow(2, levels) - 1;
+        int[] arr = MyArray.generateArray(count);
+        ArrayList<TreeNode> nodes = new ArrayList<>();
+
+        for (int i = 0; i < count; i++) {//生成所有的节点放到一个list中
+            TreeNode currNode = new TreeNode(arr[i]);
+            nodes.add(currNode);
+        }
+        for (int i = 0; i < count / 2; i++) {
+            TreeNode currNode = nodes.get(i);
+            if (root == null) {
+                root = currNode;
+            }
+            TreeNode left = nodes.get(2 * i + 1);
+            currNode.left = left;
+            TreeNode right = nodes.get(2 * i + 2);
+            currNode.right = right;
+        }
+        return root;
+    }
+
+
     private static void insert(int val) {
         TreeNode currNode = new TreeNode(val);
         if(root == null) {
