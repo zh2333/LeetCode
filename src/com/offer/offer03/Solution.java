@@ -1,6 +1,6 @@
 package com.offer.offer03;
 
-import com.offer.utils.MyArray;
+import com.leetcode.utils.MyArray;
 import org.junit.Test;
 
 /**
