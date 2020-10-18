@@ -1,16 +1,14 @@
 package com.leetcode.utils;
 
-import org.junit.Test;
-
 /**
- * �������Թ�����, ��������ĳ��ò���
- * @author �ź�
+ * 面向数组的辅助测试类
+ * @author zh
  *
  */
 public class MyArray {
 	
 	/**
-	 * ���ɶ�ά����
+	 * 生成一个二维数组
 	 * @param m
 	 * @param n
 	 * @return
@@ -25,7 +23,7 @@ public class MyArray {
 		return array;
 	}
 	/**
-	 * ����һά����
+	 * 生成一个一维数组
 	 * @param count
 	 * @return
 	 */
@@ -37,7 +35,7 @@ public class MyArray {
 		return array;
 	}
 	/**
-	 * ��ӡһά����
+	 * 打印一维数组
 	 * @param array
 	 */
 	public static void printArray(int[] array) {
@@ -54,7 +52,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ��ӡ��ά����
+	 * 打印二维数组
 	 * @param array
 	 */
 	public static void printTwoDimArray(int[][] array) {
@@ -74,7 +72,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ��������Ԫ��
+	 * 交换数组中的两个元素
 	 * @param Array
 	 * @param index1
 	 * @param index2

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LeetCodeTestHelper">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/LeetCodeTestHelper.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

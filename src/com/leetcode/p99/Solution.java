@@ -1,7 +1,7 @@
 package com.leetcode.p99;
 
 
-import com.leetcode.utils.Node;
+import com.leetcode.datastructure.Node;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,18 +4,32 @@ package com.leetcode.datastructure;
   public class ListNode {
       public int val;
       public ListNode next;
-      public ListNode(int x) { val = x; next=null;} 
-      public static ListNode generateList(int count) {
-    	  ListNode head = new ListNode(-1);
-    	  ListNode p = head;
-    	  for (int i = 0; i < count; i++) {
-			ListNode currNode = new ListNode(i);
-			p.next = currNode;
-			p = p.next;
-		}
-    	 return head.next; 
-      }
-  }
+      public ListNode(int x) { val = x; next=null;}
+
+     public int getVal() {
+         return val;
+     }
+
+     public void setVal(int val) {
+         this.val = val;
+     }
+
+     public ListNode getNext() {
+         return next;
+     }
+
+     public void setNext(ListNode next) {
+         this.next = next;
+     }
+
+     @Override
+     public String toString() {
+         return "ListNode{" +
+                 "val=" + val +
+                 ", next=" + next.val +
+                 '}';
+     }
+ }
   
   
 
