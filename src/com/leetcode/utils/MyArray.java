@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import java.util.ArrayList;
 /**
  * �������Թ�����, ��������ĳ��ò���
  * @author �ź�
