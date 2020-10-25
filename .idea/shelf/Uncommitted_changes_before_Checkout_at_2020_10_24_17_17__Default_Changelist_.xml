@@ -1,0 +1,39 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]" date="1603531075408" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2020/10/24 17:17 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/LeetCode/com/leetcode/p198/Solution.class" />
+    <option name="AFTER_PATH" value="out/production/LeetCode/com/leetcode/p198/Solution.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]/Solution.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="out/production/LeetCode/com/leetcode/p452/Solution.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]/Solution1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="out/production/LeetCode/com/leetcode/p213/Solution.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]/Solution2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="out/production/LeetCode/com/leetcode/utils/Mytest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]/Mytest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/LeetCode/META-INF/LeetCode.kotlin_module" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/LeetCode/com/leetcode/utils/MyArray.class" />
+    <option name="AFTER_PATH" value="out/production/LeetCode/com/leetcode/utils/MyArray.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]/MyArray.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="out/production/LeetCode/com/leetcode/p1024/Solution.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_10_24_17_17_[Default_Changelist]/Solution3.class" />
+  </binary>
+</changelist>

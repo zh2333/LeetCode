@@ -22,7 +22,7 @@ package com.leetcode.p198;
 public class Solution {
 	
 	public static void main(String[] args) {
-		int[] test = {1,2,3,1};
+		int[] test = {1,2,3};
 		System.out.println(rob(test));
 	}
     public static int rob(int[] nums) {
