@@ -1,20 +1,19 @@
 package com.leetcode.utils;
 
-
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 
 /**
- * 面向数组的辅助测试类
- * @author zh
+ * �������Թ�����, ��������ĳ��ò���
+ * @author �ź�
  *
  */
 public class MyArray {
 	
 	/**
-	 * 生成一个二维数组
+	 * ���ɶ�ά����
 	 * @param m
 	 * @param n
 	 * @return
@@ -29,7 +28,7 @@ public class MyArray {
 		return array;
 	}
 	/**
-	 * 生成一个一维数组
+	 * ����һά����
 	 * @param count
 	 * @return
 	 */
@@ -41,7 +40,7 @@ public class MyArray {
 		return array;
 	}
 	/**
-	 * 打印一维数组
+	 * ��ӡһά����
 	 * @param array
 	 */
 	public static void printArray(int[] array) {
@@ -58,7 +57,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * 打印二维数组
+	 * ��ӡ��ά����
 	 * @param array
 	 */
 	public static void printTwoDimArray(int[][] array) {
@@ -78,7 +77,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * 交换数组中的两个元素
+	 * ��������Ԫ��
 	 * @param Array
 	 * @param index1
 	 * @param index2
