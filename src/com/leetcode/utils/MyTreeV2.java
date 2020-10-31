@@ -2,16 +2,10 @@ package com.leetcode.utils;
 
 
 import com.leetcode.datastructure.TreeNode;
-import org.junit.Test;
 
 public class MyTreeV2 {
     private   TreeNode root = null;
 
-//    @Test
-//    public  void test() {
-//        TreeNode root = generateBST(8);
-//        show(root);
-//    }
     /**
      * 生成一棵二叉搜索树
      * @param count 数的节点的数量

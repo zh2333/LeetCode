@@ -4,13 +4,13 @@ import com.leetcode.datastructure.ListNode;
 
 public class MyList {
 	/**
-	 * ����ָ�����ȵ�����
+	 * 生成指定长度的单链表
 	 * @param count
 	 * @return
 	 */
 	public static ListNode generateList(int count) {
 		if(count == 0) {
-			System.out.println("�����Ȳ���Ϊ0");
+			System.out.println("链表不能为空!");
 			return null;
 		}
 		ListNode head = new ListNode(1);
@@ -24,12 +24,12 @@ public class MyList {
 	}
 	
 	/**
-	 * ��ӡ����
+	 * 打印单链表
 	 * @param head
 	 */
 	public static void printList(ListNode head) {
 		if(head == null) {
-			System.out.println("����ͷ����Ϊ��");
+			System.out.println("链表为空!");
 		}
 		while(head != null) {
 			if(head.next != null) {
@@ -43,7 +43,7 @@ public class MyList {
 	}
 	
 	/**
-	 * ��ת������
+	 *翻转单链表的某个部分
 	 * @param startNode
 	 * @param endNode
 	 * @return
