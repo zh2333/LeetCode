@@ -1,3 +1,5 @@
+package com.sort;
+
 public class FastSort {
     /**
      * 快排
