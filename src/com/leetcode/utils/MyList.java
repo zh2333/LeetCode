@@ -13,7 +13,7 @@ public class MyList {
 			System.out.println("链表不能为空!");
 			return null;
 		}
-		ListNode head = new ListNode(1);
+		ListNode head = new ListNode((int)(Math.random() * 10));
 		ListNode currNode = head;
 		for(int i = 2; i <= count ; i++) {
 			ListNode tmp = new ListNode((int)(Math.random() * 10));
