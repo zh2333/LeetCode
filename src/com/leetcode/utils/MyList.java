@@ -22,6 +22,28 @@ public class MyList {
 		}
 		return head;
 	}
+
+	/**
+	 * 生成有序链表
+	 * @param startNum
+	 * @param count
+	 * @return
+	 */
+	public static ListNode generateSortedList(int startNum, int count) {
+		if (count == 0) {
+			System.out.println("链表不能为空!");
+			return null;
+		}
+		ListNode head = new ListNode(startNum);
+		ListNode currNode = head;
+		for (int i = 1; i < count; i++) {
+			startNum += (int)(Math.random() * 5);
+			ListNode tmp = new ListNode(startNum);
+			currNode.next = tmp;
+			currNode = tmp;
+		}
+		return head;
+	}
 	
 	/**
 	 * 打印单链表
