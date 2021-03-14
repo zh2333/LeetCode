@@ -11,6 +11,7 @@ public class BFS {
         if (node == null) {
             return;
         }
+        LinkedList<String> list = new LinkedList<>();
         Queue<Node> queue = new LinkedList<>();
         HashSet<Node> set = new HashSet<>();
         queue.add(node);
@@ -18,12 +19,12 @@ public class BFS {
         while (!queue.isEmpty()) {
             Node curr = queue.poll();
             System.out.println(curr.val);
-            for (Node next:curr.nexts) {
-                if (!set.contains(next)) {
-                    set.add(next);
-                    queue.add(next);
-                }
-            }
+//            for (Node next:curr.nexts) {
+//                if (!set.contains(next)) {
+//                    set.add(next);
+//                    queue.add(next);
+//                }
+//            }
         }
     }
 }
