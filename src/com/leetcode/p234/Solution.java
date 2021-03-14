@@ -6,42 +6,52 @@ import java.util.List;
 import com.leetcode.datastructure.ListNode;
 
 /**
- * ÅĞ¶ÏÒ»¸öÁ´±íÊÇ·ñÊÇ»ØÎÄÁ´±í:
- * ÇëÅĞ¶ÏÒ»¸öÁ´±íÊÇ·ñÎª»ØÎÄÁ´±í¡£
-	Ê¾Àı 1:
+ * ï¿½Ğ¶ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ç»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
+ * ï¿½ï¿½ï¿½Ğ¶ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	Ê¾ï¿½ï¿½ 1:
 	
-	ÊäÈë: 1->2
-	Êä³ö: false
-	Ê¾Àı 2:
+	ï¿½ï¿½ï¿½ï¿½: 1->2
+	ï¿½ï¿½ï¿½: false
+	Ê¾ï¿½ï¿½ 2:
 	
-	ÊäÈë: 1->2->2->1
-	Êä³ö: true
- * @author ÕÅºã
+	ï¿½ï¿½ï¿½ï¿½: 1->2->2->1
+	ï¿½ï¿½ï¿½: true
+ * @author ï¿½Åºï¿½
  *
  */
 class Solution {
     public boolean isPalindrome(ListNode head) {
-    	
-    	List<Integer> list = new ArrayList();
-    	ListNode t = head;
-    	//½«Á´±í½ÚµãÌí¼Óµ½¼¯ºÏlistÖĞ
-    	while(t != null){
-    		list.add(t.val);
-    		t = t.next;
-    	}
-    	
-    	//Ê¹ÓÃË«Ö¸Õë·¨
-    	int start = 0;
-    	int last = list.size() - 1;
-    	while(start < last){
-    		if(!list.get(start).equals(list.get(last))){
-    			return false;
-    		}
-    		start++;
-    		last--;
-    	}
-    	
-		return true;
+    	if (head == null || head.next == null) {
+    		return true;
+		}
+		ListNode n1 = head;
+    	ListNode n2 = head;
+    	while (n2.next != null && n2.next.next != null) {
+    		n1 = n1.next;
+    		n2 = n2.next.next;
+		}
+    	n2 = n1.next;
+    	n1.next = null;
+    	ListNode n3 = null;
+    	while (n2 != null) {
+    		n3 = n2.next;
+    		n2.next = n1;
+    		n1 = n2;
+    		n2 = n3;
+		}
+		n3 = n1;
+    	n2 = head;
+    	boolean res = true;
+    	while (n1 != null && n2 != null) {
+			if (n1.val != n2.val) {
+				res = false;
+				break;
+			}
+			n1 = n1.next;
+			n2 = n2.next;
+		}
+
+		return res;
 
     }
 }
